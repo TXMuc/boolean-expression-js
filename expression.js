@@ -35,7 +35,7 @@ function word() {
 }
 
 function notop() {
-  return this.match(/^NOT/i).toUpperCase();
+  return this.match(/^NOT\b/i).toUpperCase();
 }
 
 function negation() {
@@ -43,11 +43,11 @@ function negation() {
 }
 
 function conjunction() {
-  return OPTREES[this.match(/^AND/i).toUpperCase()];
+  return OPTREES[this.match(/^AND\b/i).toUpperCase()];
 }
 
 function disjunction() {
-  return OPTREES[this.match(/^OR/i).toUpperCase()];
+  return OPTREES[this.match(/^OR\b/i).toUpperCase()];
 }
 
 var OPTREES = {
